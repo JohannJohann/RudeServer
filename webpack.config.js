@@ -4,6 +4,8 @@ const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 
 module.exports = {
   entry: './src/server.js',
+  mode: 'production',
+  target: "node",
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
@@ -11,5 +13,4 @@ module.exports = {
   plugins: [
     new NodePolyfillPlugin()
     ],
-  target: "node"
 };
